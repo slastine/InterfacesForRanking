@@ -1,0 +1,94 @@
+.outside {
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+.list {
+	min-height: 50px;
+	line-height: 20px;
+	font-size: 15px;
+	font-family: Helvetica;
+	overflow-y: visible;
+	
+	overflow-x: hidden;
+}
+
+
+.half {
+	
+	display: inline-block;
+	width: 49%;
+	padding: 0;
+	margin: 0;
+	vertical-align: top;
+}
+
+.item {
+	display: inline-block;
+	padding: 10px;
+	margin: 0;
+	vertical-align: top;
+	overflow-y: hidden;
+	border-right: solid 3px;
+	border-left: solid 3px;
+	border-top: solid 1.5px;
+	border-bottom: solid 1.5px;
+	margin-right: auto;
+	margin-left: auto;
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+}
+.text {
+	padding:1%;
+}
+.button {
+	width: 100px;
+	height: 50px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.article 
+{
+	outline-style: solid;
+	outline-width: 3px;
+	outline-color: black;
+	overflow-y: auto;
+	max-height: 287px;
+	margin-top: 1%;
+	margin-bottom: 2%;
+	display: block;
+	font-size: 2vh;
+	font-family: Helvetica;
+	padding: 5%;
+	text-align: left;
+}
+
+.grid {
+	width: 60%;
+	height: 80%;
+	outline-style: solid;
+	outline-width: 3px;
+	outline-color: black;
+	border-radius: 2%;
+	margin-top: 2%;
+	overflow-y: hidden;
+	padding-top: 0%;
+	z-index: 3;
+	padding-bottom: 0%;
+	margin-right: 20%;
+	margin-left: 20%;
+}
+
+.submitButton
+{
+	width: 30%;
+	height:40px;
+	font-size: 3vh;
+	font-family: Helvetica;
+	
+}

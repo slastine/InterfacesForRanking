@@ -1,0 +1,65 @@
+﻿*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+. sectionHeight {
+    height:100%
+    }
+
+body
+{
+
+}
+.outside {
+    text-align: center;
+}
+.article {
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    border: black solid 4px;
+    padding: 2%;
+    margin-left: 10%;
+    display: none;
+}
+.picker {
+    width: 80%;
+    height: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
+   display: flex;
+  flex-wrap: wrap;   
+ background-color: white;
+    border: black solid 4px;
+    padding: 2%;
+}
+.item{
+    max-width: 49%;
+    border: black solid 2px;
+    padding: 2%;
+    background-color: lightgray;
+    text-align: left;
+    margin: auto;
+height: 30vh;
+width:49%
+}
+
+.item:hover 
+{
+
+    background-color: darkgray!important;
+}
+
+.submission 
+{
+    width: 25%;
+    height: 30%;
+    padding-top:1%;
+    padding-bottom: 1%;
+    font-size: 3vh;
+}
