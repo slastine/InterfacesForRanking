@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AdminPage</title>
+    <script>
+        function createUser()
+        {
+            const urlParams = new URLSearchParams(window.location.search);
+            let id = urlParams.get('id');
+            let formData = new FormData();
+            formData.append("user", document.getElementById("user").value)
+            formData.append("pass", document.getElementById("pass").value)
+formData.append("protocol", document.getElementById("protocol").value)
+formData.append("fold", document.getElementById("fold").value)
+
+formData.append("type", "SS")
+
+            fetch('http://54.204.160.91/createUser?id=' + id, {
+                method: "post", body: formData
+
+            }).then((response) => response.text()).then((response) => {
+                document.getElementById("response").innerHTML = response;
+            });
+        }
+function createUser2()
+        {
+            const urlParams = new URLSearchParams(window.location.search);
+            let id = urlParams.get('id');
+            let formData = new FormData();
+            formData.append("user", document.getElementById("user").value)
+            formData.append("pass", document.getElementById("pass").value)
+formData.append("type", "S")
+            fetch('http://54.204.160.91/createUser?id=' + id, {
+                method: "post", body: formData
+
+            }).then((response) => response.text()).then((response) => {
+                document.getElementById("response").innerHTML = response;
+            });
+        }
+
+    </script>
+</head>
+<body>
+    <p>Create New User:</p>
+
+    <label for="user">Username:</label><br>
+    <input type="text" id="user" name="user" autocomplete="off"><br>
+    <label for="pass">Password:</label><br>
+    <input type="text" id="pass" name="pass" autocomplete="off"><br>
+<label for="pass">Protocol:</label><br>
+    <input type="number" id="protocol" name="protocol" autocomplete="off"><br>
+<label for="pass">Fold:</label><br>
+    <input type="number" id="fold" name="fold" autocomplete="off">
+
+    <button class="submit" id="submitButton" onclick="createUser2()">Create Simple</button>  <button class="submit" id="submitButton" onclick="createUser()">Create Simplest</button>
+
+    <p id="response"></p>
+</body>
+</html>

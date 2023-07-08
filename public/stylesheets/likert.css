@@ -1,0 +1,152 @@
+
+
+.grid {
+	width: 90%;
+            outline-style: solid;
+            outline-width: 3px;
+            outline-color: black;
+            border-radius: 2%;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 2%;
+			overflow-y:hidden;
+            z-index: 3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+resize: horizontal;
+			background:linear-gradient(#000,#000) center/2px 100% no-repeat;
+}
+
+.summaryDisplay 
+{
+	width: 90%;
+	outline-style: solid;
+	outline-width: 3px;
+	outline-color: black;
+	border-radius: 2%;
+	margin-right: auto;
+	margin-left: auto;
+	
+	overflow-y:hidden;
+	
+	z-index: 3;
+	display: block;
+	font-size: 2.5vh;
+	font-family: Helvetica;
+	padding: 10px;
+	text-align:left;
+	background-color:white;
+}
+
+.summaryDisplay:hover 
+{
+
+	background-color:lightgray
+}
+
+.selectionBox 
+{
+	margin-top: 25%;
+	margin-bottom: 20%;
+	text-align:center;
+	overflow-y:hidden;
+}
+
+.selectGreen, .selectYellow, .selectRed
+{
+	width: 30%;
+	height:40px;
+	font-size: 3vh;
+	font-family: Helvetica;
+	
+}
+
+.selectGreen 
+{
+	background-color: rgb(2, 201, 2);
+}
+
+.selectYellow 
+{
+	background-color: yellow;
+}
+
+.selectRed 
+{
+	background-color: rgb(241, 64, 37);
+}
+
+.selectGreen:hover
+{
+	background-color: rgb(1, 156, 1);
+}
+
+.selectYellow:hover
+{
+	background-color: rgb(181, 181, 2);
+}
+
+.selectRed:hover
+{
+	background-color: rgb(184, 34, 11);
+}
+
+.article 
+{
+	margin-top: 10%;
+	margin-bottom: 10%;
+	display: block;
+	font-size: 2vh;
+	font-family: Helvetica;
+	padding: 5%;
+	text-align: left;
+}
+
+.submit {
+	display: block;
+	text-align:center;
+	margin:auto;
+	width:35%;
+	height:20%;
+	padding-top:2%;
+	padding-bottom:2%;
+}
+
+.rate {
+    text-align:center;
+	display:inline-block;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */

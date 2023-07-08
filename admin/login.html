@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AdminPage</title>
+    <script>
+        function submit()
+        {
+            let formData = new FormData();
+            formData.append("user", document.getElementById("user").value)
+            formData.append("pass", document.getElementById("pass").value)
+            fetch('http://54.204.160.91/login', {
+                method: "post", body: formData
+
+            }).then((response) => response.json()).then((response) => {
+                if (response.admin) {
+                    window.location.href = "http://54.204.160.91/admin?id=" + response.key
+                }
+                else {
+                    window.location.href = "http://54.204.160.91/dashboard?id=" + response.key
+                }
+
+
+            });
+
+        }
+    </script>
+</head>
+<body>
+
+    <label for="user">Username:</label><br>
+    <input type="text" id="user" name="user" autocomplete="off"><br>
+    <label for="pass">Password:</label><br>
+    <input type="password" id="pass" name="pass" autocomplete="off"><br>
+    <button class="submit" id="submitButton" onclick="submit()">Login</button>
+</body>
+</html>
